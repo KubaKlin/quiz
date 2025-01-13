@@ -12,7 +12,6 @@ class Quiz {
       const userAnswer = window.prompt(question.formatQuestion());
       const formattedUserAnswer = userAnswer
         .toLowerCase()
-        .trim()
         .replace(/\s/g, '');
       if (formattedUserAnswer === question.answer) {
         result++;
