@@ -7,6 +7,7 @@ export class Quiz {
     this.questions.forEach(function (question) {
       const userAnswer = window.prompt(question.formatQuestion());
       const formattedUserAnswer = userAnswer.toLowerCase().replace(/\s/g, '');
+      console.log(formattedUserAnswer);
       if (formattedUserAnswer === question.answer) {
         result++;
         console.log('Correct!');

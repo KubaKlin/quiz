@@ -1,7 +1,8 @@
-export class YesOrNoQuestion {
+import {Question} from "./question";
+
+export class YesOrNoQuestion extends Question {
   constructor(question, answer) {
-    this.question = question;
-    this.answer = answer;
+    super(question, answer);
   }
   formatQuestion() {
     const description = `answer 'Yes' or 'No'`;

@@ -1,10 +1,9 @@
-import { YesOrNoQuestion } from './yesOrNo';
+import { Question } from './question';
 
-export class SingleChoiceQuestion extends YesOrNoQuestion {
+export class SingleChoiceQuestion extends Question {
   constructor(question, choices, answer) {
-    super(question, choices, answer);
+    super(question, answer);
     this.choices = choices;
-    this.answer = answer;
   }
   formatQuestion() {
     let formattedQuestion = `${this.question}\n`;
