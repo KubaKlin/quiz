@@ -1,3 +1,5 @@
+import {formatAnswers} from "./formatAnswer";
+
 export class Quiz {
   constructor(questions) {
     this.questions = questions;
@@ -6,9 +8,8 @@ export class Quiz {
     let result = 0;
     this.questions.forEach(function (question) {
       const userAnswer = window.prompt(question.formatQuestion());
-      const formattedUserAnswer = userAnswer.toLowerCase().replace(/\s/g, '');
-      console.log(formattedUserAnswer);
-      if (formattedUserAnswer === question.answer) {
+
+      if (formatAnswers(userAnswer) === question.answer) {
         result++;
         console.log('Correct!');
       } else {
