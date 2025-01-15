@@ -1,4 +1,4 @@
-export class singleAnswerQuestion {
+export class YesOrNoQuestion {
   constructor(question, answer) {
     this.question = question;
     this.answer = answer;

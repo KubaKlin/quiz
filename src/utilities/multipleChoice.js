@@ -1,6 +1,6 @@
-import { singleAnswerQuestion } from './singleAnswer';
+import { YesOrNoQuestion } from './yesOrNo';
 
-export class multiChoiceQuestion extends singleAnswerQuestion {
+export class MultiChoiceQuestion extends YesOrNoQuestion {
   constructor(question, choices, answer) {
     super(question, choices, answer);
     this.choices = choices;
