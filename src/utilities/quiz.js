@@ -1,4 +1,4 @@
-import {formatAnswers} from "./formatAnswer";
+import { formatAnswers } from './formatAnswer';
 
 export class Quiz {
   constructor(questions) {
