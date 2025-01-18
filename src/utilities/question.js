@@ -6,4 +6,7 @@ export class Question {
   formatQuestion() {
     return `${this.question}\n`;
   }
+  formatAnswer(userAnswer) {
+    return userAnswer.toLowerCase().replace(/\s/g, '');
+  }
 }

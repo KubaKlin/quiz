@@ -8,4 +8,7 @@ export class YesOrNoQuestion extends Question {
     const description = `answer 'Yes' or 'No'`;
     return `${this.question}\n${description}`;
   }
+  formatAnswer(userAnswer) {
+    return userAnswer.toLowerCase().replace(/\s/g, '');
+  }
 }

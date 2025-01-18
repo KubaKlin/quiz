@@ -15,4 +15,7 @@ export class SingleChoiceQuestion extends Question {
     formattedQuestion += description;
     return formattedQuestion;
   }
+  formatAnswer(userAnswer) {
+    return userAnswer.toLowerCase().replace(/\s/g, '');
+  }
 }

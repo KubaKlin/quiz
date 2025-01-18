@@ -1,5 +1,3 @@
-import { formatAnswers } from './formatAnswer';
-
 export class Quiz {
   constructor(questions) {
     this.questions = questions;
@@ -9,7 +7,7 @@ export class Quiz {
     this.questions.forEach(function (question) {
       const userAnswer = window.prompt(question.formatQuestion());
 
-      if (formatAnswers(userAnswer) === question.answer) {
+      if (question.formatAnswer(userAnswer) === question.answer) {
         result++;
         console.log('Correct!');
       } else {

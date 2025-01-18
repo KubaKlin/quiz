@@ -16,4 +16,8 @@ export class MultiChoiceQuestion extends Question {
     formattedQuestion += description;
     return formattedQuestion;
   }
+  formatAnswer(userAnswer) {
+    const multiChoiceAnswer = userAnswer.toLowerCase().replace(/[\s,]/g, '');
+    return multiChoiceAnswer.split('').sort().join(',');
+  }
 }
